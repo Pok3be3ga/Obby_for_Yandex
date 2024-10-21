@@ -47,6 +47,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 197cab8583ec8194c9d69e8d39324ae2, type: 2}
+  _dontEditMaterial: {fileID: 2100000, guid: 93c3400384f621d48aa4437d166ee2d4, type: 2}
+  _renderers:
+  - {fileID: 5844216177511884775}
+  - {fileID: 4941689627284906892}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7758863246703156871
 GameObject:
   m_ObjectHideFlags: 0
