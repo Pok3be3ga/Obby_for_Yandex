@@ -1,18 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DiePlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private PlayerRevert _player;
     void Start()
     {
-        
+        _player = FindObjectOfType<PlayerRevert>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        _player.RevertPlayer();
     }
 }

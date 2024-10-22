@@ -16,10 +16,13 @@ public class PlayerRevert : MonoBehaviour
     {
         if(gameObject.transform.position.y < _yPositionRevert)
         {
-            _player.transform.position = _currentCheckPoint;
+            RevertPlayer();
         }
     }
-
+    public void RevertPlayer()
+    {
+        _player.transform.position = _currentCheckPoint;
+    }
     public void SetTransform(Vector3 transform)
     {
         _currentCheckPoint = transform;
