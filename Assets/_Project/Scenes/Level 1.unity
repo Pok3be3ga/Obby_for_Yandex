@@ -2028,7 +2028,7 @@ GameObject:
   - component: {fileID: 243284419}
   - component: {fileID: 243284418}
   - component: {fileID: 243284421}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2616,7 +2616,7 @@ GameObject:
   - component: {fileID: 323045065}
   - component: {fileID: 323045064}
   - component: {fileID: 323045067}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6782,6 +6782,34 @@ PrefabInstance:
     - target: {fileID: 3333000002472565972, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
       propertyPath: m_LocalPosition.z
       value: -4.6534
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2047494955}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Look
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RatateForPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4941689627284906892, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12142,7 +12170,7 @@ GameObject:
   - component: {fileID: 1455106463}
   - component: {fileID: 1455106462}
   - component: {fileID: 1455106465}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13236,7 +13264,7 @@ GameObject:
   - component: {fileID: 1584920968}
   - component: {fileID: 1584920967}
   - component: {fileID: 1584920970}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13464,7 +13492,7 @@ GameObject:
   - component: {fileID: 1612872753}
   - component: {fileID: 1612872752}
   - component: {fileID: 1612872755}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15508,7 +15536,7 @@ GameObject:
   - component: {fileID: 1868189314}
   - component: {fileID: 1868189313}
   - component: {fileID: 1868189316}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16408,7 +16436,7 @@ GameObject:
   - component: {fileID: 2035053242}
   - component: {fileID: 2035053241}
   - component: {fileID: 2035053244}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17902,7 +17930,7 @@ Transform:
   m_GameObject: {fileID: 2350884145557110351}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.3, y: -10, z: 2357.9}
+  m_LocalPosition: {x: -8, y: -6.1, z: -65.2}
   m_LocalScale: {x: 3.8251, y: 4.890238, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18612,6 +18640,38 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -14.7266
       objectReference: {fileID: 0}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2047494955}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Look
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RatateForPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4941689627284906892, guid: e87accd6df58b3b42bd702fa55b94a3d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -19037,7 +19097,7 @@ Transform:
   m_GameObject: {fileID: 2896025602733600522}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.3, y: -5, z: 2332.9}
+  m_LocalPosition: {x: -8, y: -1.0999999, z: -90.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19113,7 +19173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2515059851750422214}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.062324412, y: 0.000000017701456, z: -0.0000000011053818, w: 0.998056}
+  m_LocalRotation: {x: 0.062324412, y: -0.000000017701446, z: 0.0000000011053811, w: 0.998056}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -19523,7 +19583,7 @@ Transform:
   m_GameObject: {fileID: 162324660199839469}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08042035, y: 0, z: 0, w: 0.996761}
-  m_LocalPosition: {x: 12.3, y: -5, z: 2332.9}
+  m_LocalPosition: {x: -8, y: -1.0999999, z: -90.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19707,8 +19767,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 6608604047007636790}
   - {fileID: 8609450870709700311}
-  - {fileID: 1746258697}
   - {fileID: 1312336838329441444}
+  - {fileID: 1746258697}
   - {fileID: 5133881010737004627}
   - {fileID: 803792734}
   - {fileID: 509518738}
