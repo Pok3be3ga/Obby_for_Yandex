@@ -1,17 +1,19 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CheckPoint : MonoBehaviour
 {
+    public UnityEvent _event;
     private PlayerRevert _player;
-    void Start()
+    public void Start()
     {
         _player = FindObjectOfType<PlayerRevert>();
     }
-    void Update()
+    public void OnTriggerEnter(Collider other)
     {
-        
+        Trigger();
     }
-    private void OnTriggerEnter(Collider other)
+    public virtual void Trigger()
     {
         _player.SetTransform(gameObject.transform.position);
     }
