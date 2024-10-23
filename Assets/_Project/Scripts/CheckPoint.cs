@@ -16,5 +16,6 @@ public class CheckPoint : MonoBehaviour
     public virtual void Trigger()
     {
         _player.SetTransform(gameObject.transform.position);
+        _event.Invoke();
     }
 }
