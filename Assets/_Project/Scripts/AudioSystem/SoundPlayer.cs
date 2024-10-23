@@ -11,11 +11,6 @@ namespace AudioSystem
         private float _timeSinceLastPlay = 0f;
         private float _playInterval = 0.12f;
 
-        void Start()
-        {
-            PlaySound();
-        }
-
         private void Update()
         {
             if (_playSoundInUpdate)
