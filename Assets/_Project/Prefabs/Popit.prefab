@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 97950320848910899}
   - component: {fileID: 5349883096101139990}
   - component: {fileID: 7504374771433808085}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 54397051299603361}
   - component: {fileID: 3427252571339178531}
   - component: {fileID: 7147405121891131889}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 5850651201939149995}
   - component: {fileID: 835073312522413495}
   - component: {fileID: 2775564297810352466}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7257095935290580473}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Popit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 4084313064946357385}
   - component: {fileID: 8772406840141614619}
   - component: {fileID: 1771040484663494118}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
