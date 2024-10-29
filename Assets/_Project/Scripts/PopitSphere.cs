@@ -1,18 +1,32 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PopitSphere : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private MeshRenderer _meshRenderer;
+    private PlayerRevert _player;
+    public bool _active;
+    private void Start()
     {
-        
+        _player = FindObjectOfType<PlayerRevert>();
+        _meshRenderer = GetComponent<MeshRenderer>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        Off();
+        if( _active)
+        {
+            StartCoroutine(On());
+        }
+    }
+    private void Off()
+    {
+        _meshRenderer.enabled = false;
+    }
+    private IEnumerator On()
+    {
+        yield return new WaitForSeconds(0.1f);
+        _meshRenderer.enabled = true;
+        _player.UpPlayer();
     }
 }

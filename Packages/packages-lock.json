@@ -15,11 +15,12 @@
       "hash": "891bd4e6323244bf8c99eeb727978e4fb387c04e"
     },
     "com.unity.burst": {
-      "version": "1.8.7",
+      "version": "1.8.18",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.mathematics": "1.2.1"
+        "com.unity.mathematics": "1.2.1",
+        "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },

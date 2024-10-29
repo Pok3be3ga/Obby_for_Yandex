@@ -31,7 +31,7 @@ namespace AdvancedController {
             currentYAngle = tr.localRotation.eulerAngles.y;
         }
 
-        void Update() {
+        void LateUpdate() {
             RotateCamera(input.LookDirection.x, -input.LookDirection.y);
         }
 
