@@ -62,7 +62,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2862996371562974467}
+  - {fileID: 2238947357100932937}
   m_Father: {fileID: 3895776780502055369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5490111519179860617
@@ -77,8 +77,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 354e8bda09f4dfc4ea916b102371dc9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 554505575997261363}
-  turnSpeed: 215.62
+  controller: {fileID: 8750046951687708782}
+  turnSpeed: 3600
 --- !u!1 &1936003667748135678
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperVerticalLimit: 35
   lowerVerticalLimit: 35
-  cameraSpeed: 50
+  cameraSpeed: 30
   smoothCameraRotation: 0
   cameraSmoothingFactor: 25
   input: {fileID: 11400000, guid: 115d1620159d9294cb6d7136e7e60df2, type: 2}
@@ -175,7 +175,7 @@ Transform:
   m_GameObject: {fileID: 3463651224849764522}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6}
+  m_LocalPosition: {x: 0, y: 0, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 7448823099177080490}
   - component: {fileID: 2319865607245474536}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: MainCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -331,9 +331,10 @@ GameObject:
   - component: {fileID: 5977860295567081974}
   - component: {fileID: 2725600137930672748}
   - component: {fileID: 8833213280553277770}
-  - component: {fileID: 554505575997261363}
   - component: {fileID: 655694444243254673}
   - component: {fileID: 8285040891521482987}
+  - component: {fileID: 6005504425809808058}
+  - component: {fileID: 8750046951687708782}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -351,7 +352,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 908112052142017034}
@@ -380,7 +381,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -392,7 +393,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5760964276898790519}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d054fdd4d8fb2714c984de2f0ba4be14, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -405,9 +406,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 1.6800001
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0.73440003, z: 0}
+  m_Center: {x: 0, y: 0.6, z: 0}
 --- !u!114 &8833213280553277770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,35 +421,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899afb48b2c24aa48b52a0e64ce95372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stepHeightRatio: 0.16
+  _stepHeightRatio: 0
   _colliderHeight: 2
   _colliderThickness: 1
   _colliderOffset: {x: 0, y: 0.3, z: 0}
   _isInDebugMode: 0
---- !u!114 &554505575997261363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5760964276898790519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d7434a0ed01bf34ba8f7ab6f612990b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input: {fileID: 11400000, guid: 115d1620159d9294cb6d7136e7e60df2, type: 2}
-  movementSpeed: 7
-  airControlRate: 2
-  jumpSpeed: 10
-  jumpDuration: 0.2
-  airFriction: 0.5
-  groundFriction: 100
-  gravity: 30
-  slideGravity: 5
-  slopeLimit: 30
-  useLocalMomentum: 0
-  cameraTransform: {fileID: 8165273619095251140}
 --- !u!114 &655694444243254673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,6 +452,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ceilingAngleLimit: 10
   isInDebugMode: 0
+--- !u!114 &6005504425809808058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760964276898790519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0887fac2cc2bbd543838f17644109643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _yPositionRevert: -30
+  _force: 1250
+--- !u!114 &8750046951687708782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760964276898790519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7434a0ed01bf34ba8f7ab6f612990b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 11400000, guid: 115d1620159d9294cb6d7136e7e60df2, type: 2}
+  movementSpeed: 22
+  airControlRate: 8
+  jumpSpeed: 15
+  jumpDuration: 0.5
+  airFriction: 35
+  groundFriction: 100
+  gravity: 60
+  slideGravity: 5
+  slopeLimit: 110
+  useLocalMomentum: 1
+  cameraTransform: {fileID: 8165273619095251140}
 --- !u!1001 &1772430058002159778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -501,7 +516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4adf00e258dec4644bb2f48860374151, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4adf00e258dec4644bb2f48860374151, type: 3}
       propertyPath: m_LocalPosition.z
@@ -567,6 +582,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2559285840627121667, guid: 4adf00e258dec4644bb2f48860374151, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0045
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559285840627121667, guid: 4adf00e258dec4644bb2f48860374151, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0019
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559285840627121667, guid: 4adf00e258dec4644bb2f48860374151, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0002
+      objectReference: {fileID: 0}
     - target: {fileID: 6417125815936643320, guid: 4adf00e258dec4644bb2f48860374151, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -587,12 +614,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7940977602631454116}
   m_SourcePrefab: {fileID: 100100000, guid: 4adf00e258dec4644bb2f48860374151, type: 3}
---- !u!4 &2862996371562974467 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4adf00e258dec4644bb2f48860374151, type: 3}
-  m_PrefabInstance: {fileID: 1772430058002159778}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3238291178311784377 stripped
+--- !u!1 &1466350964322379251 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4adf00e258dec4644bb2f48860374151, type: 3}
   m_PrefabInstance: {fileID: 1772430058002159778}
@@ -604,7 +626,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3238291178311784377}
+  m_GameObject: {fileID: 1466350964322379251}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7d3dbd907d8eda44ca6bf60d326bb892, type: 2}
@@ -618,3 +640,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &2238947357100932937 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4adf00e258dec4644bb2f48860374151, type: 3}
+  m_PrefabInstance: {fileID: 1772430058002159778}
+  m_PrefabAsset: {fileID: 0}
