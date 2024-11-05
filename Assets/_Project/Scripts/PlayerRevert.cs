@@ -2,6 +2,7 @@ using AdvancedController;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
+using YG;
 
 public class PlayerRevert : MonoBehaviour
 {
@@ -11,7 +12,6 @@ public class PlayerRevert : MonoBehaviour
     private PlayerController _playerController;
     private PlayerMover _playerMover;
     private Rigidbody _rigidbody;
-    private Vector3 _currentCheckPoint;
     private Animator _controller;
     void Start()
     {
@@ -19,8 +19,12 @@ public class PlayerRevert : MonoBehaviour
         _playerController = _player.GetComponent<PlayerController>();
         _playerMover = _player.GetComponent<PlayerMover>();
         _rigidbody = _player.GetComponent<Rigidbody>();
-        _controller = gameObject.GetComponentInChildren<Animator>();
-        SetTransform(_player.transform.localPosition);
+        _controller = gameObject.GetComponentInChildren<Animator>();        
+
+        if (YandexGame.savesData.CurrentCheckPointX == 0f)
+            SetTransform(_player.transform.localPosition);
+        else
+            RevertPlayer();
     }
     void Update()
     {
@@ -31,11 +35,15 @@ public class PlayerRevert : MonoBehaviour
     }
     public void RevertPlayer()
     {
-        _player.transform.position = _currentCheckPoint;
+        _player.transform.position = new(YandexGame.savesData.CurrentCheckPointX, 
+            YandexGame.savesData.CurrentCheckPointY, YandexGame.savesData.CurrentCheckPointZ);
     }
     public void SetTransform(Vector3 transform)
     {
-        _currentCheckPoint = transform;
+        YandexGame.savesData.CurrentCheckPointX = transform.x;
+        YandexGame.savesData.CurrentCheckPointY = transform.y;
+        YandexGame.savesData.CurrentCheckPointZ = transform.z;
+        YandexGame.SaveProgress();
     }
     public void UpPlayer()
     {

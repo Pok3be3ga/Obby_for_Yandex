@@ -17,6 +17,7 @@ public class CheckPoint : MonoBehaviour
     {
         _player.SetTransform(gameObject.transform.position + Vector3.up);
         _event.Invoke();
+        Debug.Log("Прошёл чекпоинт");
     }
     public virtual void OnlyTrigger()
     {

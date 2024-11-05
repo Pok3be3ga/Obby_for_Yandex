@@ -1,0 +1,17 @@
+{
+  "idSave": 4,
+  "isFirstSession": false,
+  "language": "ru",
+  "promptDone": false,
+  "money": 1,
+  "newPlayerName": "Hello!",
+  "openLevels": [
+    false,
+    true,
+    false
+  ],
+  "CurrentCheckPointX": 13.7074413,
+  "CurrentCheckPointY": -10.21217,
+  "CurrentCheckPointZ": 654.7,
+  "PlayTime": 0.0
+}
