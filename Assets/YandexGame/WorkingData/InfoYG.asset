@@ -36,7 +36,7 @@ MonoBehaviour:
   flush: 0
   localSaveSync: 1
   saveCloudInterval: 5
-  saveOnQuitGame: 0
+  saveOnQuitGame: 1
   quitGameParameters:
     objectName: YandexGame
     methodName: _SaveProgress
@@ -133,7 +133,7 @@ MonoBehaviour:
     thisPlayer:
       rank: 0
       score: 0
-  - technoName: time
+  - technoName: LB
     entries: 'Test LeaderBoard
 
       Name: time
@@ -144,10 +144,10 @@ MonoBehaviour:
       Max: 15
 
       3. Maria: 23'
-    isDefault: 0
+    isDefault: 1
     isInvertSortOrder: 0
     decimalOffset: 0
-    type: numeric
+    type: time
     players:
     - rank: 6
       name: anonymous
@@ -178,7 +178,22 @@ MonoBehaviour:
       name: Player6
       score: 340000
       photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 321
+      uniqueID: 322
+    - rank: 2
+      name: Player7
+      score: 323000
+      photo: https://justplaygames.ru/public/icon_player.png
+      uniqueID: 323
+    - rank: 2
+      name: Player8
+      score: 340000
+      photo: https://justplaygames.ru/public/icon_player.png
+      uniqueID: 324
+    - rank: 2
+      name: Player9
+      score: 340000
+      photo: https://justplaygames.ru/public/icon_player.png
+      uniqueID: 352
     thisPlayer:
       rank: 2
       score: 10
@@ -218,35 +233,6 @@ MonoBehaviour:
     de: 0
     hi: 0
   fonts:
-    defaultFont: []
-    ru: []
-    en: []
-    tr: []
-    az: []
-    be: []
-    he: []
-    hy: []
-    ka: []
-    et: []
-    fr: []
-    kk: []
-    ky: []
-    lt: []
-    lv: []
-    ro: []
-    tg: []
-    tk: []
-    uk: []
-    uz: []
-    es: []
-    pt: []
-    ar: []
-    id: []
-    ja: []
-    it: []
-    de: []
-    hi: []
-  fontsTMP:
     defaultFont: []
     ru: []
     en: []

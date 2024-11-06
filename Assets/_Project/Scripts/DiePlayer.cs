@@ -9,6 +9,6 @@ public class DiePlayer : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        _player.RevertPlayer();
+        _player.RevertPlayer(true);
     }
 }
