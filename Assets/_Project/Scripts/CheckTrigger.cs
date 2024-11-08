@@ -1,8 +1,14 @@
 
+using UnityEngine;
+
 public class CheckTrigger : CheckPoint
 {
-    public override void OnlyTrigger()
+    public override void OnTriggerEnter(Collider other)
     {
-        base.OnlyTrigger();
+        OnlyTrigger();
+    }
+    public void OnlyTrigger()
+    {
+        _event.Invoke();
     }
 }

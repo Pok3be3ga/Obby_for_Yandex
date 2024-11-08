@@ -5,22 +5,27 @@ public class CheckPoint : MonoBehaviour
 {
     public UnityEvent _event;
     private PlayerRevert _player;
+    private bool _active = false;
     public void Start()
     {
         _player = FindObjectOfType<PlayerRevert>();
     }
-    public void OnTriggerEnter(Collider other)
+    public virtual void OnTriggerEnter(Collider other)
     {
         Trigger();
     }
     public virtual void Trigger()
     {
-        _player.SetTransform(gameObject.transform.position + Vector3.up, true);
+        if(_active == false)
+        {
+            _player.SetTransform(gameObject.transform.position + Vector3.up, true);
+            _active = true;
+        }
+        else
+        {
+
+        }
         _event.Invoke();
         Debug.Log("Прошёл чекпоинт");
-    }
-    public virtual void OnlyTrigger()
-    {
-        _event.Invoke();
     }
 }
