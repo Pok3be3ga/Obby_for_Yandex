@@ -2,6 +2,7 @@
   "dependencies": {
     "com.gitamend.improvedtimers": "https://github.com/adammyhre/Unity-Improved-Timers.git",
     "com.gitamend.unityutils": "https://github.com/adammyhre/Unity-Utils.git",
+    "com.unity.2d.sprite": "1.0.0",
     "com.unity.burst": "1.8.18",
     "com.unity.cinemachine": "2.9.7",
     "com.unity.collab-proxy": "2.5.1",

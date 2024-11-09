@@ -58,7 +58,7 @@ namespace AudioSystem
             _current = gameObject.GetOrAdd<AudioSource>();
             _current.clip = clip;
             _current.outputAudioMixerGroup = _musicMixerGroup; // Set mixer group
-            _current.loop = false; // For playlist functionality, we want tracks to play once
+            _current.loop = true; // For playlist functionality, we want tracks to play once
             _current.volume = 0;
             _current.bypassListenerEffects = true;
             _current.Play();
@@ -69,11 +69,6 @@ namespace AudioSystem
         void Update()
         {
             HandleCrossFade();
-
-            if (_current && !_current.isPlaying && _playlist.Count > 0)
-            {
-                PlayNextTrack();
-            }
         }
 
         void HandleCrossFade()
