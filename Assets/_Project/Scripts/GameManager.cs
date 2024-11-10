@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     private bool _stop = true;
     [SerializeField] private TextMeshProUGUI _textMeshPro;
 
-    private float _updateInterval = 1.0f;
     private float _lastUpdateTime = 0.0f;
 
     void Start()
@@ -34,9 +33,10 @@ public class GameManager : MonoBehaviour
         int seconds = Mathf.FloorToInt(Timer % 60);
         _textMeshPro.text = $"{minutes:D2}:{seconds:D2}";
 
-        if (Time.time >= _lastUpdateTime + _updateInterval)
+        if (Time.time >= _lastUpdateTime + 1.2f)
         {
             YandexGame.savesData.PlayTime = Timer;
+            YandexGame.NewLBScoreTimeConvert("LB", Timer);
             YandexGame.SaveProgress();
             _lastUpdateTime = Time.time;
         }
