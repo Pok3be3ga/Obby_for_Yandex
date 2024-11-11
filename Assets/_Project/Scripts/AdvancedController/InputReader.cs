@@ -56,17 +56,17 @@ public class InputReader : ScriptableObject, IPlayerActions, IInputReader
 
     public void OnFire(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Started)
-        {
-            if (IsDeviceMouse(context))
-            {
-                var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-                if (Physics.Raycast(ray.origin, ray.direction, out var hit, 100))
-                {
-                    Click.Invoke(hit);
-                }
-            }
-        }
+        //if (context.phase == InputActionPhase.Started)
+        //{
+        //    if (IsDeviceMouse(context))
+        //    {
+        //        var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        //        if (Physics.Raycast(ray.origin, ray.direction, out var hit, 100))
+        //        {
+        //            Click.Invoke(hit);
+        //        }
+        //    }
+        //}
     }
 
     public void OnMouseControlCamera(InputAction.CallbackContext context)

@@ -5,7 +5,7 @@ public class CheckPoint : MonoBehaviour
 {
     public UnityEvent _event;
     private PlayerRevert _player;
-    private bool _active = false;
+    public bool _active = false;
     public void Start()
     {
         _player = FindObjectOfType<PlayerRevert>();
