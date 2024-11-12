@@ -1,9 +1,8 @@
 using AdvancedController;
 using AudioSystem;
-using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 using YG;
+
 
 public class PlayerRevert : MonoBehaviour
 {
@@ -78,7 +77,6 @@ public class PlayerRevert : MonoBehaviour
     public void UpPlayer()
     {
         _playerController.OnJumpStart();
-        //_playerMover.SetVelocity(Vector3.up * _force);
         _rigidbody.AddRelativeForce(Vector3.up * _force + Vector3.right, ForceMode.Impulse);
     }
 }

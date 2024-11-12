@@ -22,19 +22,16 @@ namespace UnityUtils.StateMachine
                 }
                 ResetActionPredicateFlags(anyTransitions);
             }
-            // Проверка нажатия левой или правой кнопки мыши
             if (Input.GetMouseButtonDown(1))
             {
-                Cursor.visible = false; // Скрыть курсор
+                Cursor.visible = false;
             }
 
-            // Проверка нажатия клавиши Escape
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(0))
             {
-                Cursor.visible = true; // Показать курсор
+                Cursor.visible = true;
             }
             currentNode.State?.Update();
-
         }
 
         static void ResetActionPredicateFlags(IEnumerable<Transition> transitions) {

@@ -4,26 +4,23 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - SkyLift
-  - JumpPadToSky
-  - Ladder
-  - JumpPadMush
-  - JumpPad
-  - Teleporter
+  - InputManager
+  - ItemManager
+  - UIManager
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PostProcessing
+  - Ground
+  - Climbable
+  - FPS Arms
+  - Player
   - 
   - 
   - 

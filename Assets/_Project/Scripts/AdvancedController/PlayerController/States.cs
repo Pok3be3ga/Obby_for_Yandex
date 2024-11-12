@@ -1,4 +1,3 @@
-using UnityEngine;
 using UnityUtils.StateMachine;
 
 namespace AdvancedController {

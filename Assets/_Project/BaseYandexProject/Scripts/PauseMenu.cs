@@ -5,12 +5,16 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] Image _panel;
+    [SerializeField] GameObject _mobileUI;
     [SerializeField] Button _button;
     [SerializeField] Button _homeButton;
+    [SerializeField] Button _MobileButton;
     private void Start()
     {
         _button.onClick.AddListener(PanelActive);
         _homeButton.onClick.AddListener(Home);
+        _MobileButton.onClick.AddListener(() => 
+        { _mobileUI.SetActive(!_mobileUI.active); });
     }
     private void Update()
     {

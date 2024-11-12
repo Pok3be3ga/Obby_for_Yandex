@@ -203,7 +203,7 @@ namespace AdvancedController
             if (useLocalMomentum) momentum = tr.worldToLocalMatrix * momentum;
         }
 
-        void HandleJumping()
+        public void HandleJumping()
         {
             momentum = VectorMath.RemoveDotVector(momentum, tr.up);
             momentum += tr.up * jumpSpeed;
