@@ -39,12 +39,12 @@ public class GameManager : MonoBehaviour
         int seconds = Mathf.FloorToInt(Timer % 60);
         _textMeshPro.text = $"{minutes:D2}:{seconds:D2}";
 
-        if (Time.time >= _lastUpdateTime + 1.2f)
-        {
-            YandexGame.savesData.PlayTime = Timer;
-            YandexGame.NewLBScoreTimeConvert("LB", Timer);
-            YandexGame.SaveProgress();
-            _lastUpdateTime = Time.time;
-        }
+        //if (Time.time >= _lastUpdateTime + 1.2f)
+        //{
+        //    YandexGame.savesData.PlayTime = Timer;
+        //    YandexGame.NewLBScoreTimeConvert("LB", Timer);
+        //    YandexGame.SaveProgress();
+        //    _lastUpdateTime = Time.time;
+        //}
     }
 }
