@@ -342,6 +342,17 @@
                 FocusGame();
             }
         }
+        function CheckMobileDevice() {
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+        SendMessage('PlatformChecker', 'OnMobileDevice');
+        console.log('OnMobileDevice');
+    } else {
+        SendMessage('PlatformChecker', 'OnDesktopDevice');
+        console.log('OnDesktopDevice');
+    }
+}
 
         // Additional script modules:
 

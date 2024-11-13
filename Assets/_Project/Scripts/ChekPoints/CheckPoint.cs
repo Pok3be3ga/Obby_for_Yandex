@@ -5,9 +5,11 @@ public class CheckPoint : MonoBehaviour
 {
     public UnityEvent _event;
     private PlayerRevert _player;
+    private GameManager _gameManager;
     public bool _active = false;
     public void Start()
     {
+        //_gameManager = FindObjectOfType<GameManager>();
         _player = FindObjectOfType<PlayerRevert>();
     }
     public virtual void OnTriggerEnter(Collider other)

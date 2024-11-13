@@ -8,11 +8,17 @@ public class GameManager : MonoBehaviour
     private bool _stop = true;
     [SerializeField] private TextMeshProUGUI _textMeshPro;
 
+    PlatformChecker platformChecker;
+
     private float _lastUpdateTime = 0.0f;
 
     void Start()
     {
+        YandexGame.GameplayStart();
         Timer = YandexGame.savesData.PlayTime;
+        SwicherTimer(true);
+        platformChecker = FindObjectOfType<PlatformChecker>();
+        platformChecker.CheckPlatform();
     }
 
     void Update()
