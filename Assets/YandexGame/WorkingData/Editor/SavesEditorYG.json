@@ -1,17 +1,17 @@
 {
-    "idSave": 206,
-    "isFirstSession": false,
-    "language": "ru",
-    "promptDone": false,
-    "money": 1,
-    "newPlayerName": "Hello!",
-    "openLevels": [
-        false,
-        true,
-        false
-    ],
-    "CurrentCheckPointX": 5.377803802490234,
-    "CurrentCheckPointY": -14.612170219421387,
-    "CurrentCheckPointZ": 5199.7998046875,
-    "PlayTime": 123.66256713867188
+  "idSave": 218,
+  "isFirstSession": false,
+  "language": "ru",
+  "promptDone": false,
+  "money": 1,
+  "newPlayerName": "Hello!",
+  "openLevels": [
+    false,
+    true,
+    false
+  ],
+  "CurrentCheckPointX": 5.377804,
+  "CurrentCheckPointY": -14.61217,
+  "CurrentCheckPointZ": 5199.8,
+  "PlayTime": 123.662567
 }
