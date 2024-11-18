@@ -9,12 +9,14 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] Button _button;
     [SerializeField] Button _homeButton;
     [SerializeField] Button _MobileButton;
+    [SerializeField] Button _resetSceneButton;
     private void Start()
     {
         _button.onClick.AddListener(PanelActive);
         _homeButton.onClick.AddListener(Home);
         _MobileButton.onClick.AddListener(() => 
         { _mobileUI.SetActive(!_mobileUI.active); });
+        _resetSceneButton.onClick.AddListener(ResetScene);
     }
     private void Update()
     {
@@ -36,5 +38,10 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         Time.timeScale = 1.0f;
+    }
+    private void ResetScene()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(sceneName);
     }
 }
