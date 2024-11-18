@@ -885,7 +885,7 @@
                     "path": "<Touchscreen>/touch*/position",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Touch",
+                    "groups": "",
                     "action": "Point",
                     "isComposite": false,
                     "isPartOfComposite": false

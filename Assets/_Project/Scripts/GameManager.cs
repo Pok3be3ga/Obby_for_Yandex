@@ -5,7 +5,7 @@ using YG;
 public class GameManager : MonoBehaviour
 {
     public float Timer;
-    private bool _stop = true;
+    private bool _active = false;
     [SerializeField] private TextMeshProUGUI _textMeshPro;
 
     PlatformChecker platformChecker;
@@ -23,13 +23,13 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (!_stop)
+        if (_active == true)
             DisplayTimer();
     }
 
     public void SwicherTimer(bool _bool)
     {
-        _stop = _bool;
+        _active = _bool;
     }
 
     private void DisplayTimer()
