@@ -1,2 +1,2 @@
-Build path: C:/Projects/Builds/Obby_for_Yandex
-Build number: 22
+Build path: E:/Unity/My Games/Obby_for_Yandex/Build
+Build number: 24

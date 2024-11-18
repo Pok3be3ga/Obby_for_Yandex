@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     {
         YandexGame.GameplayStart();
         Timer = YandexGame.savesData.PlayTime;
-        SwicherTimer(true);
+        _active = YandexGame.savesData.ActiveTimer;
         platformChecker = FindObjectOfType<PlatformChecker>();
         platformChecker.CheckPlatform();
     }
@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public void SwicherTimer(bool _bool)
     {
         _active = _bool;
+        YandexGame.savesData.ActiveTimer = _bool;
     }
 
     private void DisplayTimer()
@@ -39,12 +40,12 @@ public class GameManager : MonoBehaviour
         int seconds = Mathf.FloorToInt(Timer % 60);
         _textMeshPro.text = $"{minutes:D2}:{seconds:D2}";
 
-        //if (Time.time >= _lastUpdateTime + 1.2f)
-        //{
-        //    YandexGame.savesData.PlayTime = Timer;
-        //    YandexGame.NewLBScoreTimeConvert("LB", Timer);
-        //    YandexGame.SaveProgress();
-        //    _lastUpdateTime = Time.time;
-        //}
+        if (Time.time >= _lastUpdateTime + 1.2f)
+        {
+            YandexGame.savesData.PlayTime = Timer;
+            //YandexGame.NewLBScoreTimeConvert("LB", Timer);
+            YandexGame.SaveProgress();
+            _lastUpdateTime = Time.time;
+        }
     }
 }

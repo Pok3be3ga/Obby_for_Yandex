@@ -37,14 +37,14 @@ namespace AdvancedController
 
         void LateUpdate()
         {
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                _isRotationLocked = !_isRotationLocked;
-                if (_isRotationLocked)
-                    Debug.Log("Камеры выключена. Нажмите 'C', что бы включить");
-                else
-                    Debug.Log("Камеры включена. Нажмите 'C', что бы выключить");
-            }
+            //if (Input.GetKeyDown(KeyCode.C))
+            //{
+            //    _isRotationLocked = !_isRotationLocked;
+            //    if (_isRotationLocked)
+            //        Debug.Log("Камеры выключена. Нажмите 'C', что бы включить");
+            //    else
+            //        Debug.Log("Камеры включена. Нажмите 'C', что бы выключить");
+            //}
 
             if (!_isRotationLocked)
                 RotateCamera(input.LookDirection.x, -input.LookDirection.y);
