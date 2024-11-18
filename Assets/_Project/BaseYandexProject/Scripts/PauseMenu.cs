@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using YG;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] Button _homeButton;
     [SerializeField] Button _MobileButton;
     [SerializeField] Button _resetSceneButton;
+    [SerializeField] GameManager _gameManager;
     private void Start()
     {
         _button.onClick.AddListener(PanelActive);
@@ -41,7 +43,10 @@ public class PauseMenu : MonoBehaviour
     }
     private void ResetScene()
     {
+        YandexGame.ResetSaveProgress();
+
         string sceneName = SceneManager.GetActiveScene().name;
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(sceneName);
     }
 }
