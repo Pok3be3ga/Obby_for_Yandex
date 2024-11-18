@@ -18,7 +18,7 @@ public class SavesManager : PersistentSingleton<SavesManager>
     public void DeleteSaves()
     {
         YandexGame.ResetSaveProgress();
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Debug.Log("Сохранения удалены");
     }
 }
