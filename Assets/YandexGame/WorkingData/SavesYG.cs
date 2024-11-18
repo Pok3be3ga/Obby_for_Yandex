@@ -23,7 +23,7 @@ namespace YG
         public float CurrentCheckPointZ = -60.8f;
 
         public float PlayTime = 0f;
-        public bool StopTimer = true;
+        public bool ActiveTimer = false;
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 

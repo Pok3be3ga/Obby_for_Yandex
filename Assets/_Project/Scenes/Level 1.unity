@@ -3317,9 +3317,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: 
-  en: 
-  tr: 
+  ru: "\u0422\u0430\u043C \u043D\u0438\u0447\u0435\u0433\u043E \u043D\u0435\u0442!"
+  en: There's nothing there!
+  tr: "Orada hi\xE7bir \u015Fey yok!"
   az: 
   be: 
   he: 
@@ -3349,9 +3349,9 @@ MonoBehaviour:
   uniqueFont: {fileID: 0}
   additionalText: {fileID: 0}
   textHeight: 20
-  processTranslateLabel: 
+  processTranslateLabel: 3/3 completed
   componentTextField: 1
-  countLang: 0
+  countLang: 3
 --- !u!1001 &96529008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3393,7 +3393,7 @@ PrefabInstance:
     - target: {fileID: 1091942803291375225, guid: e9d5ffc9a0b719c4cbc3381d7e827f06,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1091942803291609689, guid: e9d5ffc9a0b719c4cbc3381d7e827f06,
         type: 3}
@@ -5445,9 +5445,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: 
-  en: 
-  tr: 
+  ru: "\u0414\u0430\u043B\u044C\u0448\u0435 \u043D\u0435\u043B\u044C\u0437\u044F"
+  en: You can't go any further
+  tr: Daha ileri gidemezsin
   az: 
   be: 
   he: 
@@ -5477,9 +5477,9 @@ MonoBehaviour:
   uniqueFont: {fileID: 0}
   additionalText: {fileID: 0}
   textHeight: 20
-  processTranslateLabel: 
+  processTranslateLabel: 3/3 completed
   componentTextField: 1
-  countLang: 0
+  countLang: 3
 --- !u!1 &228807227
 GameObject:
   m_ObjectHideFlags: 0
@@ -8631,9 +8631,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: 
-  en: 
-  tr: 
+  ru: "\u042F \u0437\u0430 \u0442\u043E\u0431\u043E\u0439 \u0441\u043B\u0435\u0436\u0443!"
+  en: I'm watching you!
+  tr: Seni izliyorum!
   az: 
   be: 
   he: 
@@ -8663,9 +8663,9 @@ MonoBehaviour:
   uniqueFont: {fileID: 0}
   additionalText: {fileID: 0}
   textHeight: 20
-  processTranslateLabel: 
+  processTranslateLabel: 3/3 completed
   componentTextField: 1
-  countLang: 0
+  countLang: 3
 --- !u!4 &336435525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 84798139744806762, guid: 334e04ea2ef165441a176697f6959d7a,
@@ -8844,7 +8844,7 @@ PrefabInstance:
     - target: {fileID: 2314935142293839282, guid: b42aa3f5250af22429aa13485faa9977,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2314935142307693778, guid: b42aa3f5250af22429aa13485faa9977,
         type: 3}
@@ -9461,7 +9461,7 @@ PrefabInstance:
     - target: {fileID: 3469776750364042554, guid: f4b85cffa7ba79e4aa77bc7af76250ba,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3469776750364080410, guid: f4b85cffa7ba79e4aa77bc7af76250ba,
         type: 3}
@@ -13469,7 +13469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &549280686
 Transform:
   m_ObjectHideFlags: 0
@@ -13497,6 +13497,45 @@ Transform:
   - {fileID: 1601526904}
   m_Father: {fileID: 1848059394}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &555404408
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/RoundedCorners
+  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _WidthHeightRadius: {r: 128, g: 128, b: 37.45, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &556704769
 GameObject:
   m_ObjectHideFlags: 0
@@ -13744,7 +13783,7 @@ PrefabInstance:
     - target: {fileID: 6177507960043267939, guid: fa4ce03d0e3bd324f98e52fa7b972e9f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16589,7 +16628,7 @@ PrefabInstance:
     - target: {fileID: 2166906944303430771, guid: 800f1682b2899944eb58bf76b4abc283,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2166906944303915091, guid: 800f1682b2899944eb58bf76b4abc283,
         type: 3}
@@ -16794,9 +16833,10 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: 
-  en: 
-  tr: 
+  ru: "\u0412\u043F\u0435\u0440\u0435\u0434\u0438 \u0442\u043E\u0447\u043D\u043E
+    \u043D\u0438\u0447\u0435\u0433\u043E \u043D\u0435\u0442"
+  en: There's definitely nothing ahead
+  tr: "\u0130leride kesinlikle hi\xE7bir \u015Fey yok"
   az: 
   be: 
   he: 
@@ -16826,9 +16866,9 @@ MonoBehaviour:
   uniqueFont: {fileID: 0}
   additionalText: {fileID: 0}
   textHeight: 20
-  processTranslateLabel: 
+  processTranslateLabel: 3/3 completed
   componentTextField: 1
-  countLang: 0
+  countLang: 3
 --- !u!1 &687358450
 GameObject:
   m_ObjectHideFlags: 0
@@ -18064,9 +18104,11 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: 
-  en: 
-  tr: 
+  ru: "\u0422\u044B \u043F\u0440\u0430\u0432\u0434\u0430 \u043C\u043D\u0435 \u043F\u043E\u0432\u0435\u0440\u0438\u043B???\n:D"
+  en: 'Did you really believe me???
+
+'
+  tr: "Ger\xE7ekten bana inand\u0131n m\u0131???\n"
   az: 
   be: 
   he: 
@@ -18096,9 +18138,9 @@ MonoBehaviour:
   uniqueFont: {fileID: 0}
   additionalText: {fileID: 0}
   textHeight: 20
-  processTranslateLabel: 
+  processTranslateLabel: 3/3 completed
   componentTextField: 1
-  countLang: 0
+  countLang: 3
 --- !u!1 &714411067
 GameObject:
   m_ObjectHideFlags: 0
@@ -18829,45 +18871,6 @@ Material:
     m_Colors:
     - _Color: {r: 0.00715504, g: 0.018913, b: 0.0315514, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-  m_BuildTextureStacks: []
---- !u!21 &736791664
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/RoundedCorners
-  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _WidthHeightRadius: {r: 128, g: 128, b: 37.45, a: 0}
   m_BuildTextureStacks: []
 --- !u!1 &740310227
 GameObject:
@@ -20226,12 +20229,12 @@ PrefabInstance:
     - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d,
         type: 3}
       propertyPath: _active
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d,
         type: 3}
       propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4448831806409851899, guid: e87accd6df58b3b42bd702fa55b94a3d,
         type: 3}
@@ -23858,9 +23861,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: 
-  en: 
-  tr: 
+  ru: "\u0422\u0430\u043C \u043D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u0431\u044B\u043B\u043E)"
+  en: There was nothing there)
+  tr: "Orada hi\xE7bir \u015Fey yoktu)"
   az: 
   be: 
   he: 
@@ -23890,9 +23893,9 @@ MonoBehaviour:
   uniqueFont: {fileID: 0}
   additionalText: {fileID: 0}
   textHeight: 20
-  processTranslateLabel: 
+  processTranslateLabel: 3/3 completed
   componentTextField: 1
-  countLang: 0
+  countLang: 3
 --- !u!4 &882385507 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8772810332930805942, guid: e87accd6df58b3b42bd702fa55b94a3d,
@@ -29021,9 +29024,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: 
-  en: 
-  tr: 
+  ru: "\u042F \u0437\u0430 \u0442\u043E\u0431\u043E\u0439 \u0441\u043B\u0435\u0436\u0443!"
+  en: I'm watching you!
+  tr: Seni izliyorum!
   az: 
   be: 
   he: 
@@ -29053,9 +29056,9 @@ MonoBehaviour:
   uniqueFont: {fileID: 0}
   additionalText: {fileID: 0}
   textHeight: 20
-  processTranslateLabel: 
+  processTranslateLabel: 3/3 completed
   componentTextField: 1
-  countLang: 0
+  countLang: 3
 --- !u!1001 &1096464986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31797,7 +31800,7 @@ PrefabInstance:
     - target: {fileID: 7353369823886502960, guid: 2a0f27a5218a2ee49acf011074e81c46,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7353369823905805648, guid: 2a0f27a5218a2ee49acf011074e81c46,
         type: 3}
@@ -32169,9 +32172,10 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: 
-  en: 
-  tr: 
+  ru: "\u041A\u0440\u0430\u0441\u043D\u044B\u0439 \u0446\u0432\u0435\u0442 \u043D\u0435\u0441\u0435\u0442
+    \u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u044C"
+  en: Red color is dangerous
+  tr: "K\u0131rm\u0131z\u0131 renk tehlikelidir"
   az: 
   be: 
   he: 
@@ -32201,9 +32205,9 @@ MonoBehaviour:
   uniqueFont: {fileID: 0}
   additionalText: {fileID: 0}
   textHeight: 20
-  processTranslateLabel: 
-  componentTextField: 0
-  countLang: 0
+  processTranslateLabel: 3/3 completed
+  componentTextField: 1
+  countLang: 3
 --- !u!1 &1233089142
 GameObject:
   m_ObjectHideFlags: 0
@@ -32551,7 +32555,7 @@ PrefabInstance:
     - target: {fileID: 5482905406542901176, guid: 414e4df555cfc5f49a980ff8e796a824,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5482905406560892632, guid: 414e4df555cfc5f49a980ff8e796a824,
         type: 3}
@@ -32740,17 +32744,17 @@ PrefabInstance:
     - target: {fileID: 3895776780502055369, guid: 334e04ea2ef165441a176697f6959d7a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.17
+      value: -5.8
       objectReference: {fileID: 0}
     - target: {fileID: 3895776780502055369, guid: 334e04ea2ef165441a176697f6959d7a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.28
+      value: -11.78
       objectReference: {fileID: 0}
     - target: {fileID: 3895776780502055369, guid: 334e04ea2ef165441a176697f6959d7a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5410.42
+      value: -61
       objectReference: {fileID: 0}
     - target: {fileID: 3895776780502055369, guid: 334e04ea2ef165441a176697f6959d7a,
         type: 3}
@@ -35111,7 +35115,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -35742,7 +35746,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1340802766}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1678935829}
+        m_TargetAssemblyTypeName: SavesManager, Assembly-CSharp
+        m_MethodName: DeleteSaves
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1340802766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38113,7 +38129,7 @@ PrefabInstance:
     - target: {fileID: 8300756209306563730, guid: 841bbe509e936df41ad4305ae9f6d5a4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8300756209325731314, guid: 841bbe509e936df41ad4305ae9f6d5a4,
         type: 3}
@@ -40599,7 +40615,7 @@ PrefabInstance:
     - target: {fileID: 2769948509372914464, guid: 6f69198eb66969647af475dbfd6227b5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2769948509372942080, guid: 6f69198eb66969647af475dbfd6227b5,
         type: 3}
@@ -42140,7 +42156,7 @@ PrefabInstance:
     - target: {fileID: 2559580298243245164, guid: eeb5e4d232d95f7478aedf5d523835c9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2559580298243676236, guid: eeb5e4d232d95f7478aedf5d523835c9,
         type: 3}
@@ -42766,6 +42782,45 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 469061211}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1595632241
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/RoundedCorners
+  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _WidthHeightRadius: {r: 800, g: 800, b: 110, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1595735722
 GameObject:
   m_ObjectHideFlags: 0
@@ -43774,45 +43829,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 368078700}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1627993601
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/RoundedCorners
-  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _WidthHeightRadius: {r: 800, g: 800, b: 110, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1631933792
 GameObject:
   m_ObjectHideFlags: 0
@@ -45505,6 +45521,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82889bcead2d633439a02923933b8c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _autoUnparentOnAwake: 1
+  _gameManager: {fileID: 0}
 --- !u!1001 &1681652941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47437,9 +47455,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: 
-  en: 
-  tr: 
+  ru: "\u041D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u0431\u043E\u0439\u0441\u044F"
+  en: Don't be afraid of anything
+  tr: "Hi\xE7bir \u015Feyden korkma"
   az: 
   be: 
   he: 
@@ -47469,9 +47487,9 @@ MonoBehaviour:
   uniqueFont: {fileID: 0}
   additionalText: {fileID: 0}
   textHeight: 20
-  processTranslateLabel: 
+  processTranslateLabel: 3/3 completed
   componentTextField: 1
-  countLang: 0
+  countLang: 3
 --- !u!1 &1777505075
 GameObject:
   m_ObjectHideFlags: 0
@@ -48886,7 +48904,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   _active: 0
 --- !u!21 &1838513355
@@ -51178,7 +51196,7 @@ PrefabInstance:
     - target: {fileID: 1646910867032224778, guid: bc82b8a9c38043c40bb0edf85230edda,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1646910867045887338, guid: bc82b8a9c38043c40bb0edf85230edda,
         type: 3}
@@ -52727,7 +52745,7 @@ PrefabInstance:
     - target: {fileID: 500834183476041223, guid: 57a79e6cc462e1540963f8e1c1cd1deb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -54930,6 +54948,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 549280685}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   _active: 0
 --- !u!4 &2070086566 stripped
 Transform:
@@ -56589,9 +56619,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: 
-  en: 
-  tr: 
+  ru: "\u0422\u0443\u0442 \u0431\u0443\u0434\u0435\u0442 \u0441\u043B\u043E\u0436\u043D\u043E"
+  en: It will be difficult here
+  tr: Burada zor olacak
   az: 
   be: 
   he: 
@@ -56621,9 +56651,9 @@ MonoBehaviour:
   uniqueFont: {fileID: 0}
   additionalText: {fileID: 0}
   textHeight: 20
-  processTranslateLabel: 
+  processTranslateLabel: 3/3 completed
   componentTextField: 1
-  countLang: 0
+  countLang: 3
 --- !u!1001 &1990491846064755342
 PrefabInstance:
   m_ObjectHideFlags: 0
