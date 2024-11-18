@@ -1,5 +1,5 @@
 {
-  "idSave": 221,
+  "idSave": 225,
   "isFirstSession": false,
   "language": "ru",
   "promptDone": false,
@@ -13,5 +13,6 @@
   "CurrentCheckPointX": 5.377804,
   "CurrentCheckPointY": -14.61217,
   "CurrentCheckPointZ": 5199.8,
-  "PlayTime": 123.662567
+  "PlayTime": 123.662567,
+  "StopTimer": false
 }

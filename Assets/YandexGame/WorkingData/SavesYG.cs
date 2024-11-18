@@ -19,10 +19,11 @@ namespace YG
         // Ваши сохранения
 
         public float CurrentCheckPointX = 0f;
-        public float CurrentCheckPointY = 0f;
-        public float CurrentCheckPointZ = 0f;
+        public float CurrentCheckPointY = -12f;
+        public float CurrentCheckPointZ = -60.8f;
 
         public float PlayTime = 0f;
+        public bool StopTimer = true;
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 
