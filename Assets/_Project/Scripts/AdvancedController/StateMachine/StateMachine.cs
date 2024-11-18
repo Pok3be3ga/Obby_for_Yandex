@@ -25,10 +25,12 @@ namespace UnityUtils.StateMachine
             if (Input.GetMouseButtonDown(1))
             {
                 Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
             }
 
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(0))
             {
+                Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
             currentNode.State?.Update();
