@@ -13,13 +13,15 @@ namespace AdvancedController
         [Range(0f, 90f)] public float upperVerticalLimit = 35f;
         [Range(0f, 90f)] public float lowerVerticalLimit = 35f;
 
-        public float cameraSpeed = 50f;
+        public float cameraSpeed = 5f;
         public bool smoothCameraRotation;
         [Range(1f, 50f)] public float cameraSmoothingFactor = 25f;
 
+        private float _xEuler;
         Transform tr;
         Camera cam;
         [SerializeField, Required] InputReader input;
+        [SerializeField] MobileCameraController mobileCameraController;
         private bool _isRotationLocked = false;
         #endregion
 
@@ -45,9 +47,27 @@ namespace AdvancedController
             //    else
             //        Debug.Log("Камеры включена. Нажмите 'C', что бы выключить");
             //}
-
             if (!_isRotationLocked)
-                RotateCamera(input.LookDirection.x, -input.LookDirection.y);
+                RotateCamera(Input.GetAxisRaw("Mouse X"), -Input.GetAxisRaw("Mouse Y"));
+
+
+            if (mobileCameraController.Pressed)
+            {
+                foreach(Touch touch in Input.touches)
+                {
+                    if((touch.fingerId == mobileCameraController.FingerID))
+                    {
+                        if(touch.phase == TouchPhase.Moved)
+                        {
+                            RotateCamera(touch.deltaPosition.y, - touch.deltaPosition.x);
+                        }
+                        if (touch.phase == TouchPhase.Stationary)
+                        {
+                            RotateCamera(0, 0);
+                        }
+                    }
+                }
+            }
         }
 
         void RotateCamera(float horizontalInput, float verticalInput)
