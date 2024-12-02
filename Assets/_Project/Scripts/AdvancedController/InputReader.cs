@@ -13,7 +13,7 @@ public interface IInputReader
 public class InputReader : ScriptableObject, IPlayerActions, IInputReader
 {
     public event UnityAction<Vector2> Move = delegate { };
-    public event UnityAction<Vector2, bool> Look = delegate { };
+    //public event UnityAction<Vector2, bool> Look = delegate { };
     public event UnityAction EnableMouseControlCamera = delegate { };
     public event UnityAction DisableMouseControlCamera = delegate { };
     public event UnityAction<bool> Jump = delegate { };
@@ -26,7 +26,7 @@ public class InputReader : ScriptableObject, IPlayerActions, IInputReader
     public bool IsJumpKeyPressed() => inputActions.Player.Jump.IsPressed();
 
     public Vector2 Direction => inputActions.Player.Move.ReadValue<Vector2>();
-    public Vector2 LookDirection => inputActions.Player.Look.ReadValue<Vector2>();
+    //public Vector2 LookDirection => inputActions.Player.Look.ReadValue<Vector2>();
 
     public void EnablePlayerActions()
     {
@@ -45,7 +45,7 @@ public class InputReader : ScriptableObject, IPlayerActions, IInputReader
 
     public void OnLook(InputAction.CallbackContext context)
     {
-        Look.Invoke(context.ReadValue<Vector2>(), IsDeviceMouse(context));
+        //Look.Invoke(context.ReadValue<Vector2>(), IsDeviceMouse(context));
     }
 
     bool IsDeviceMouse(InputAction.CallbackContext context)

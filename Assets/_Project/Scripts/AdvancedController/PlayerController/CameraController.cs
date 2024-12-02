@@ -20,7 +20,7 @@ namespace AdvancedController
         private float _xEuler;
         Transform tr;
         Camera cam;
-        [SerializeField, Required] InputReader input;
+        //[SerializeField, Required] InputReader input;
         [SerializeField] MobileCameraController mobileCameraController;
         private bool _isRotationLocked = false;
         #endregion
@@ -53,13 +53,14 @@ namespace AdvancedController
 
             if (mobileCameraController.Pressed)
             {
-                foreach(Touch touch in Input.touches)
+                _isRotationLocked = true;
+                foreach (Touch touch in Input.touches)
                 {
-                    if((touch.fingerId == mobileCameraController.FingerID))
+                    if ((touch.fingerId == mobileCameraController.FingerID))
                     {
-                        if(touch.phase == TouchPhase.Moved)
+                        if (touch.phase == TouchPhase.Moved)
                         {
-                            RotateCamera(touch.deltaPosition.y, - touch.deltaPosition.x);
+                            RotateCamera(touch.deltaPosition.y, -touch.deltaPosition.x);
                         }
                         if (touch.phase == TouchPhase.Stationary)
                         {
@@ -68,6 +69,8 @@ namespace AdvancedController
                     }
                 }
             }
+            else
+                _isRotationLocked = false;
         }
 
         void RotateCamera(float horizontalInput, float verticalInput)
