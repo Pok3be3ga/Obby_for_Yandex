@@ -27,7 +27,10 @@ namespace AdvancedController
 
         public Vector3 GetUpDirection() => tr.up;
         public Vector3 GetFacingDirection() => tr.forward;
-
+        public void Loked(bool value)
+        {
+            _isRotationLocked = value;
+        }
         void Awake()
         {
             tr = transform;
@@ -47,30 +50,25 @@ namespace AdvancedController
             //    else
             //        Debug.Log("Камеры включена. Нажмите 'C', что бы выключить");
             //}
-            if (!_isRotationLocked)
-                RotateCamera(Input.GetAxisRaw("Mouse X"), -Input.GetAxisRaw("Mouse Y"));
-
-
-            if (mobileCameraController.Pressed)
-            {
-                _isRotationLocked = true;
-                foreach (Touch touch in Input.touches)
+                if (mobileCameraController.Pressed)
                 {
-                    if ((touch.fingerId == mobileCameraController.FingerID))
+                    foreach (Touch touch in Input.touches)
                     {
-                        if (touch.phase == TouchPhase.Moved)
+                        if ((touch.fingerId == mobileCameraController.FingerID))
                         {
-                            RotateCamera(touch.deltaPosition.y, -touch.deltaPosition.x);
-                        }
-                        if (touch.phase == TouchPhase.Stationary)
-                        {
-                            RotateCamera(0, 0);
+                            if (touch.phase == TouchPhase.Moved)
+                            {
+                                RotateCamera(touch.deltaPosition.y, -touch.deltaPosition.x);
+                            }
+                            if (touch.phase == TouchPhase.Stationary)
+                            {
+                                RotateCamera(0, 0);
+                            }
                         }
                     }
                 }
-            }
-            else
-                _isRotationLocked = false;
+                else
+                RotateCamera(Input.GetAxisRaw("Mouse X"), -Input.GetAxisRaw("Mouse Y"));
         }
 
         void RotateCamera(float horizontalInput, float verticalInput)

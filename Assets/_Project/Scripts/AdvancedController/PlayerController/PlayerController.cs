@@ -12,6 +12,7 @@ namespace AdvancedController
     {
         #region Fields
         [SerializeField, Required] InputReader input;
+        [SerializeField] private Joystick _joystick;
 
         Transform tr;
         PlayerMover mover;
@@ -147,12 +148,24 @@ namespace AdvancedController
 
         Vector3 CalculateMovementDirection()
         {
-            Vector3 direction = cameraTransform == null
+            if (_joystick.IsPressed)
+            {
+                Vector3 direction = cameraTransform == null
+                ? tr.right * _joystick.Value.x + tr.forward * _joystick.Value.y
+                : Vector3.ProjectOnPlane(cameraTransform.right, tr.up).normalized * _joystick.Value.x +
+                  Vector3.ProjectOnPlane(cameraTransform.forward, tr.up).normalized * _joystick.Value.y;
+
+                return direction.magnitude > 1f ? direction.normalized : direction;
+            }
+            else
+            {
+                Vector3 direction = cameraTransform == null
                 ? tr.right * input.Direction.x + tr.forward * input.Direction.y
                 : Vector3.ProjectOnPlane(cameraTransform.right, tr.up).normalized * input.Direction.x +
                   Vector3.ProjectOnPlane(cameraTransform.forward, tr.up).normalized * input.Direction.y;
 
-            return direction.magnitude > 1f ? direction.normalized : direction;
+                return direction.magnitude > 1f ? direction.normalized : direction;
+            }
         }
 
         void HandleMomentum()

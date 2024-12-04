@@ -56,7 +56,7 @@ public class Joystick : MonoBehaviour
 
     public void Deactivate()
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     void UpdateSize()
