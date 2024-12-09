@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMobileController : MonoBehaviour
@@ -7,10 +5,11 @@ public class CameraMobileController : MonoBehaviour
     [SerializeField] float _sens = 2f;
     [SerializeField] float _sensPanelRotate = 1f;
     [SerializeField] float _maxYAngle = 80;
-    [SerializeField] float _rotationX = 0f;
-    [SerializeField] float _rotationY = 0f;
+     float _rotationX = 0f;
+     float _rotationY = 0f;
 
-    [SerializeField] Vector2 _debugPosition;
+    [SerializeField] int _coefX = 1;
+    [SerializeField] int _coefY = 1;
     [SerializeField] TouchChecker _touchChecker;
 
     private void Update()
@@ -26,14 +25,13 @@ public class CameraMobileController : MonoBehaviour
                 {
                     if (touch.phase == TouchPhase.Moved)
                     {
-                        _debugPosition = touch.position;
-                        mouseY = touch.deltaPosition.y * _sensPanelRotate;
-                        mouseX = touch.deltaPosition.x * _sensPanelRotate;
+                        mouseX = touch.deltaPosition.x * _sensPanelRotate * _coefX;
+                        mouseY = touch.deltaPosition.y * -_sensPanelRotate * _coefY;
                     }
                     if (touch.phase == TouchPhase.Stationary)
                     {
-                        mouseY = 0f;
                         mouseX = 0f;
+                        mouseY = 0f;
                     }
                 }
             }
@@ -41,7 +39,7 @@ public class CameraMobileController : MonoBehaviour
 
         _rotationX -= mouseY * _sens;
         _rotationX = Mathf.Clamp(_rotationX, -_maxYAngle, _maxYAngle);
-        _rotationY -= mouseX * _sens;
+        _rotationY += mouseX * _sens;
         transform.localRotation = Quaternion.Euler(_rotationX, _rotationY, 0.0f);
     }
 }

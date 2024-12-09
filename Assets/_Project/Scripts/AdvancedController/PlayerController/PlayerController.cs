@@ -2,6 +2,7 @@ using System;
 using ImprovedTimers;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityUtils;
 using UnityUtils.StateMachine;
 
@@ -37,6 +38,7 @@ namespace AdvancedController
         CountdownTimer jumpTimer;
 
         [SerializeField] Transform cameraTransform;
+        [SerializeField] Joystick _joystick;
 
         Vector3 momentum, savedVelocity, savedMovementVelocity;
 
@@ -147,12 +149,25 @@ namespace AdvancedController
 
         Vector3 CalculateMovementDirection()
         {
+            if (_joystick.IsPressed)
+            {
+                Vector3 direction = cameraTransform == null
+                ? tr.right * _joystick.Value.x + tr.forward * _joystick.Value.y
+                : Vector3.ProjectOnPlane(cameraTransform.right, tr.up).normalized * _joystick.Value.x +
+                  Vector3.ProjectOnPlane(cameraTransform.forward, tr.up).normalized * _joystick.Value.y;
+
+                return direction.magnitude > 1f ? direction.normalized : direction;
+            }
+            else
+            {
                 Vector3 direction = cameraTransform == null
                 ? tr.right * input.Direction.x + tr.forward * input.Direction.y
                 : Vector3.ProjectOnPlane(cameraTransform.right, tr.up).normalized * input.Direction.x +
-                  Vector3.ProjectOnPlane(cameraTransform.forward, tr.up).normalized * input.Direction.y;
+                Vector3.ProjectOnPlane(cameraTransform.forward, tr.up).normalized * input.Direction.y;
 
                 return direction.magnitude > 1f ? direction.normalized : direction;
+            }
+
         }
 
         void HandleMomentum()

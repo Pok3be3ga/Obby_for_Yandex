@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+//using UnityEngine.InputSystem;
 
 enum InputType
 {
@@ -39,6 +40,7 @@ public class Joystick : MonoBehaviour
     [SerializeField] private bool _backgroundFollowPointer;
 
     [SerializeField] private JoystickArea _joystickArea;
+    [SerializeField] TouchChecker _touchChecker;
 
     private void OnValidate()
     {
@@ -99,20 +101,20 @@ public class Joystick : MonoBehaviour
         
         if (!IsPressed) return;
 
-        if (_inputType == InputType.Touch)
+        if (_touchChecker.Pressed)
         {
             foreach (Touch touch in Input.touches)
             {
-                if (touch.fingerId == _fingerId)
+                if (touch.phase == TouchPhase.Moved)
                 {
-                    OnPressed(touch.position);
+                    if (touch.fingerId == _touchChecker.FingerID)
+                    {
+                        OnPressed(touch.position);
+                    }
                 }
             }
         }
-        else if (_inputType == InputType.Mouse)
-        {
-            OnPressed(Input.mousePosition);
-        }
+
     }
 
     public void OnDown(PointerEventData eventData)
@@ -120,7 +122,7 @@ public class Joystick : MonoBehaviour
         IsPressed = true;
         Show();
         
-        _fingerId = eventData.pointerId;
+        _fingerId = _touchChecker.FingerID;
         _backgroundTransform.position = eventData.position;
         EventOnDown.Invoke(eventData.position);
         // Чтобы не было кадра в котором джойстик на старом месте
