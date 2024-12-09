@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class MobileCameraController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class TouchChecker : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public bool Pressed = false;
     public int FingerID;
