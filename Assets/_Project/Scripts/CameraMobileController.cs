@@ -37,7 +37,7 @@ public class CameraMobileController : MonoBehaviour
             }
         }
 
-        _rotationX -= mouseY * _sens;
+        _rotationX += mouseY * _sens;
         _rotationX = Mathf.Clamp(_rotationX, -_maxYAngle, _maxYAngle);
         _rotationY += mouseX * _sens;
         transform.localRotation = Quaternion.Euler(_rotationX, _rotationY, 0.0f);

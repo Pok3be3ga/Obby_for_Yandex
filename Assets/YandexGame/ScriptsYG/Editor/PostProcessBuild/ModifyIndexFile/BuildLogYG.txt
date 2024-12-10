@@ -1,2 +1,2 @@
 Build path: C:/Projects/Builds/Obby_for_Yandex
-Build number: 38
+Build number: 40
