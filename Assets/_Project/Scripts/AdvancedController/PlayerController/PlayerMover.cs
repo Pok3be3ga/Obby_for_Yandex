@@ -76,7 +76,7 @@ namespace AdvancedController
         public bool IsGrounded() => _isGrounded;
         public Vector3 GetGroundNormal() => _sensor.GetNormal();
 
-        public void SetVelocity(Vector3 velocity) => _rb.velocity = velocity + _currentGroundAdjustmentVelocity;
+        public void SetVelocity(Vector3 velocity) => _rb.linearVelocity = velocity + _currentGroundAdjustmentVelocity;
         public void SetExtendSensorRange(bool isExtended) => _isUsingExtendedSensorRange = isExtended;
 
         void Setup()

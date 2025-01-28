@@ -60,7 +60,7 @@ namespace YG
         IEnumerator TimerAdShow()
         {
             if (pauseTo_ViewingAdsYG)
-                ViewingAdsYG.onPause?.Invoke();
+                ViewingAdsYG.onPause?.Invoke(true);
 
             doPause?.Invoke();
 

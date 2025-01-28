@@ -136,6 +136,20 @@
             }
         });
 
+        function ResumeGame() {
+            if (myGameInstance && myGameInstance.Module) {
+                // Возобновление главного цикла Unity
+                myGameInstance.Module.resumeMainLoop();
+
+                // (Курсор снова может быть спрятан, если это требуется игрой)
+            }
+
+            let audioElements = document.querySelectorAll('audio, video');
+            audioElements.forEach(element => {
+                element.muted = false;
+            });
+        }
+
         let StartUnityInstance;
         let myGameInstance = null;
         let ysdk = null;
@@ -342,17 +356,6 @@
                 FocusGame();
             }
         }
-        function CheckMobileDevice() {
-    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    
-    if (isMobile) {
-        SendMessage('PlatformChecker', 'OnMobileDevice');
-        console.log('OnMobileDevice');
-    } else {
-        SendMessage('PlatformChecker', 'OnDesktopDevice');
-        console.log('OnDesktopDevice');
-    }
-}
 
         // Additional script modules:
 

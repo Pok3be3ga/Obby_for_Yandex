@@ -33,7 +33,7 @@ function GetPayments(sendback) {
                                 price[i] = products[i].price;
                                 priceValue[i] = products[i].priceValue;
                                 priceCurrencyCode[i] = products[i].priceCurrencyCode;
-                                currencyImageURL[i] = products[i].getPriceCurrencyImage();
+                                currencyImageURL[i] = products[i].getPriceCurrencyImage("medium");
 
                                 consumed[i] = true;
                                 for (i2 = 0; i2 < purchases.length; i2++) {

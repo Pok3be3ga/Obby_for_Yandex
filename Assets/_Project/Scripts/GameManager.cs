@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
         YandexGame.GameplayStart();
         Timer = YandexGame.savesData.PlayTime;
         _active = YandexGame.savesData.ActiveTimer;
-        platformChecker = FindObjectOfType<PlatformChecker>();
+        platformChecker = FindFirstObjectByType<PlatformChecker>();
         platformChecker.CheckPlatform();
     }
 

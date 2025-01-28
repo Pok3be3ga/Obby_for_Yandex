@@ -94,6 +94,13 @@ namespace YG.Utils.LB
 
         public static void CopyLBData(out LBData copy, LBData original)
         {
+            if (original == null)
+            {
+                copy = null;
+                Debug.LogError("Original leaderboard data null!");
+                return;
+            }
+
             copy = new LBData()
             {
                 type = original.type,

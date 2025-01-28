@@ -6,7 +6,7 @@ using UnityToolbag;
 
 namespace YG
 {
-    [HelpURL("https://www.notion.so/PluginYG-d457b23eee604b7aa6076116aab647ed#facf33554b8f478d9b03656f789cc38a")]
+    [DefaultExecutionOrder(-101), HelpURL("https://www.notion.so/PluginYG-d457b23eee604b7aa6076116aab647ed#facf33554b8f478d9b03656f789cc38a")]
     public class ViewingAdsYG : MonoBehaviour
     {
         public enum CursorVisible
@@ -62,14 +62,14 @@ namespace YG
         [SerializeField]
         private bool logPause;
 
-        public static Action onPause;
+        public static bool isPause;
+        public static Action<bool> onPause;
 
         private static bool audioPauseOnAd;
         private static float timeScaleOnAd;
         private static bool cursorVisibleOnAd;
         private static CursorLockMode cursorLockModeOnAd;
         private static bool start;
-        private static bool awaitingClosure;
         private EventSystem eventSystem;
 
         private void Awake()
@@ -82,16 +82,19 @@ namespace YG
                 cursorLockModeOnAd = awakeValues.cursorLockMode;
                 start = true;
 
-                ClosingADValues closingValuesOrig = closingADValues;
-                closingADValues = awakeValues;
-                Pause(false);
-                closingADValues = closingValuesOrig;
+                if (!isPause)
+                {
+                    ClosingADValues closingValuesOrig = closingADValues;
+                    closingADValues = awakeValues;
+                    Pause(false);
+                    closingADValues = closingValuesOrig;
+                }
             }
         }
 
         private void Start()
         {
-            if (!start)
+            if (!start && !isPause)
             {
                 start = true;
                 audioPauseOnAd = AudioListener.pause;
@@ -107,7 +110,7 @@ namespace YG
             YandexGame.CloseFullAdEvent += Play;
             YandexGame.OpenVideoEvent += Stop;
             YandexGame.CloseVideoEvent += Play;
-            onPause += Stop;
+            onPause += Pause;
         }
 
         private void OnDisable()
@@ -116,7 +119,7 @@ namespace YG
             YandexGame.CloseFullAdEvent -= Play;
             YandexGame.OpenVideoEvent -= Stop;
             YandexGame.CloseVideoEvent -= Play;
-            onPause -= Stop;
+            onPause -= Pause;
         }
 
         private void Stop() => Pause(true);
@@ -129,10 +132,6 @@ namespace YG
 
             if (pause)
             {
-                if (awaitingClosure)
-                    return;
-                awaitingClosure = true;
-
                 if (!eventSystem)
                     eventSystem = GameObject.FindAnyObjectByType<EventSystem>();
                 if (eventSystem)
@@ -140,8 +139,6 @@ namespace YG
             }
             else
             {
-                awaitingClosure = false;
-
                 if (!eventSystem)
                     eventSystem = GameObject.FindAnyObjectByType<EventSystem>();
                 if (eventSystem)
@@ -161,7 +158,8 @@ namespace YG
                     {
                         if (pause)
                         {
-                            audioPauseOnAd = AudioListener.pause;
+                            if (!isPause)
+                                audioPauseOnAd = AudioListener.pause;
                             AudioListener.pause = true;
                         }
                         else AudioListener.pause = audioPauseOnAd;
@@ -179,7 +177,8 @@ namespace YG
                     {
                         if (pause)
                         {
-                            timeScaleOnAd = Time.timeScale;
+                            if (!isPause)
+                                timeScaleOnAd = Time.timeScale;
                             Time.timeScale = 0;
                         }
                         else Time.timeScale = timeScaleOnAd;
@@ -190,8 +189,11 @@ namespace YG
                 {
                     if (pause)
                     {
-                        cursorVisibleOnAd = Cursor.visible;
-                        cursorLockModeOnAd = Cursor.lockState;
+                        if (!isPause)
+                        {
+                            cursorVisibleOnAd = Cursor.visible;
+                            cursorLockModeOnAd = Cursor.lockState;
+                        }
 
                         Cursor.visible = true;
                         Cursor.lockState = CursorLockMode.None;
@@ -217,6 +219,8 @@ namespace YG
 
             if (pause) customEvents.OpenAd.Invoke();
             else customEvents.CloseAd.Invoke();
+
+            isPause = pause;
         }
     }
 }

@@ -94,13 +94,11 @@ namespace YG
 
         void OnUpdateLB(LBData lbData)
         {
-            LBMethods.CopyLBData(out LBData lb, lbData);
-
-            if (lb.technoName == nameLB)
+            if (lbData.technoName == nameLB)
             {
                 string noData = "...";
 
-                if (lb.entries == "no data")
+                if (lbData.entries == "no data")
                 {
                     noData = YandexGame.savesData.language switch
                     {
@@ -112,17 +110,14 @@ namespace YG
                 }
                 if (!advanced)
                 {
-                    lb.entries = lb.entries.Replace("anonymous", LangMethods.IsHiddenTextTranslate(YandexGame.Instance.infoYG));
-                    entriesText.text = lb.entries;
+                    lbData.entries = lbData.entries.Replace("anonymous", LangMethods.IsHiddenTextTranslate(YandexGame.Instance.infoYG));
+                    entriesText.text = lbData.entries;
                 }
                 else
                 {
-#if UNITY_EDITOR
-                    lb = LBMethods.SortLB(lb, quantityTop, quantityAround, maxQuantityPlayers);
-#endif
                     DestroyLBList();
 
-                    if (lb.entries == "no data")
+                    if (lbData.entries == "no data")
                     {
                         players = new LBPlayerDataYG[1];
                         GameObject playerObj = Instantiate(playerDataPrefab, rootSpawnPlayersData);
@@ -139,7 +134,10 @@ namespace YG
                     }
                     else
                     {
-                        SpawnPlayersList(lb);
+#if UNITY_EDITOR
+                        lbData = LBMethods.SortLB(lbData, quantityTop, quantityAround, maxQuantityPlayers);
+#endif
+                        SpawnPlayersList(lbData);
                     }
                 }
                 onUpdateData.Invoke();

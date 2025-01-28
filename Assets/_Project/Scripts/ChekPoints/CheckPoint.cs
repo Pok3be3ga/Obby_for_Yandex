@@ -10,7 +10,7 @@ public class CheckPoint : MonoBehaviour
     public void Start()
     {
         //_gameManager = FindObjectOfType<GameManager>();
-        _player = FindObjectOfType<PlayerRevert>();
+        _player = FindFirstObjectByType<PlayerRevert>();
     }
     public virtual void OnTriggerEnter(Collider other)
     {
@@ -28,6 +28,5 @@ public class CheckPoint : MonoBehaviour
 
         }
         _event.Invoke();
-        Debug.Log("Прошёл чекпоинт");
     }
 }

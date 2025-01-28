@@ -1,7 +1,7 @@
 {
-  "idSave": 1795,
+  "idSave": 3597,
   "isFirstSession": false,
-  "language": "ru",
+  "language": "tr",
   "promptDone": false,
   "money": 1,
   "newPlayerName": "Hello!",
@@ -10,9 +10,9 @@
     true,
     false
   ],
-  "CurrentCheckPointX": -8.648266,
+  "CurrentCheckPointX": -5.31135941,
   "CurrentCheckPointY": -10.7,
-  "CurrentCheckPointZ": -51.13672,
-  "PlayTime": 1860.62488,
+  "CurrentCheckPointZ": 114.200928,
+  "PlayTime": 39.2458344,
   "ActiveTimer": true
 }

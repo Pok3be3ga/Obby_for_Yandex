@@ -36,14 +36,14 @@ MonoBehaviour:
   flush: 0
   localSaveSync: 1
   saveCloudInterval: 5
-  saveOnQuitGame: 1
+  saveOnQuitGame: 0
   quitGameParameters:
     objectName: YandexGame
     methodName: _SaveProgress
   leaderboardEnable: 1
   saveScoreAnonymousPlayers: 1
   leaderboardSimulation:
-  - technoName: advanced
+  - technoName: LB
     entries: 'Test LeaderBoard
 
       Name: advanced
@@ -133,7 +133,7 @@ MonoBehaviour:
     thisPlayer:
       rank: 0
       score: 0
-  - technoName: LB
+  - technoName: time
     entries: 'Test LeaderBoard
 
       Name: time
@@ -144,10 +144,10 @@ MonoBehaviour:
       Max: 15
 
       3. Maria: 23'
-    isDefault: 1
+    isDefault: 0
     isInvertSortOrder: 0
     decimalOffset: 0
-    type: time
+    type: numeric
     players:
     - rank: 6
       name: anonymous
@@ -178,28 +178,13 @@ MonoBehaviour:
       name: Player6
       score: 340000
       photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 322
-    - rank: 2
-      name: Player7
-      score: 323000
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 323
-    - rank: 2
-      name: Player8
-      score: 340000
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 324
-    - rank: 2
-      name: Player9
-      score: 340000
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 352
+      uniqueID: 321
     thisPlayer:
       rank: 2
       score: 10
   LocalizationEnable: 1
   callingLanguageCheck: 1
-  translateMethod: 0
+  translateMethod: 1
   domainAutoLocalization: com
   CSVFileTranslate:
     format: 0
@@ -233,6 +218,35 @@ MonoBehaviour:
     de: 0
     hi: 0
   fonts:
+    defaultFont: []
+    ru: []
+    en: []
+    tr: []
+    az: []
+    be: []
+    he: []
+    hy: []
+    ka: []
+    et: []
+    fr: []
+    kk: []
+    ky: []
+    lt: []
+    lv: []
+    ro: []
+    tg: []
+    tk: []
+    uk: []
+    uz: []
+    es: []
+    pt: []
+    ar: []
+    id: []
+    ja: []
+    it: []
+    de: []
+    hi: []
+  fontsTMP:
     defaultFont: []
     ru: []
     en: []

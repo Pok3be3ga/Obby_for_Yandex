@@ -24,10 +24,10 @@ namespace YG
                     return;
 
 #if !UNITY_EDITOR
-                Message("New Liderboard Record: " + score);
+                Message("New Leaderboard Record: " + score);
                 SetLeaderboardScores(nameLB, (int)score);
 #else
-                Message($"New Liderboard '{nameLB}' Record: {score}");
+                Message($"New Leaderboard '{nameLB}' Record: {score}");
 #endif
             }
         }
@@ -73,24 +73,6 @@ namespace YG
 
         public static void GetLeaderboard(string nameLB, int maxQuantityPlayers, int quantityTop, int quantityAround, string photoSizeLB)
         {
-            void NoData()
-            {
-                LBData lb = new LBData()
-                {
-                    technoName = nameLB,
-                    entries = "no data",
-                    players = new LBPlayerData[1]
-                    {
-                        new LBPlayerData()
-                        {
-                            name = "no data",
-                            photo = null
-                        }
-                    }
-                };
-                onGetLeaderboard?.Invoke(lb);
-            }
-
 #if !UNITY_EDITOR
             if (Instance.infoYG.leaderboardEnable)
             {
@@ -110,7 +92,10 @@ namespace YG
                 LBData[] LBs = new LBData[Instance.infoYG.leaderboardSimulation.Length];
 
                 for (int i = 0; i < Instance.infoYG.leaderboardSimulation.Length; i++)
+                {
+                    LBs[i] = new LBData();
                     LBMethods.CopyLBData(out LBs[i], Instance.infoYG.leaderboardSimulation[i]);
+                }
 
                 for (int i = 0; i < LBs.Length; i++)
                 {
@@ -145,6 +130,24 @@ namespace YG
                 NoData();
             }
 #endif
+
+            void NoData()
+            {
+                LBData lb = new LBData()
+                {
+                    technoName = nameLB,
+                    entries = "no data",
+                    players = new LBPlayerData[1]
+                    {
+                        new LBPlayerData()
+                        {
+                            name = "no data",
+                            photo = null
+                        }
+                    }
+                };
+                onGetLeaderboard?.Invoke(lb);
+            }
         }
 
         // Receiving messages

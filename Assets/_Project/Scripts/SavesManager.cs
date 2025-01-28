@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using YG;
 
-public class SavesManager : PersistentSingleton<SavesManager>
+public class SavesManager : MonoBehaviour
 {
     [SerializeField] private GameManager _gameManager;
-    
+
+    [ContextMenu("Record Leaderboard")]
     public void RecordLeaderboard()
     {
-        _gameManager.SwicherTimer(true);
-        YandexGame.NewLBScoreTimeConvert("LB", YandexGame.savesData.PlayTime);
+        //_gameManager.SwicherTimer(true);
+        YandexGame.NewLBScoreTimeConvert("LB", _gameManager.Timer);
         Debug.Log("Лидерборд записан");
     }
 

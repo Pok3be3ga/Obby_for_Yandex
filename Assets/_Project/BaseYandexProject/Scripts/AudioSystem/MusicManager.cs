@@ -70,7 +70,17 @@ namespace AudioSystem
         {
             HandleCrossFade();
         }
-
+        void OnApplicationFocus(bool hasFocus)
+        {
+            if (hasFocus == false && _current != null)
+            {
+                _current.Pause();
+            }
+            else if (hasFocus == true)
+            {
+                _current.UnPause();
+            }
+        }
         void HandleCrossFade()
         {
             if (_fading <= 0f) return;
